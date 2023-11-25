@@ -37,6 +37,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist/${{ github.event.repository.name }}-${{ steps.get_version.outputs.version-without-v }}.tar.gz
           asset_name: ${{ github.event.repository.name }}-${{ steps.get_version.outputs.version }}.tar.gz
-          tag: ${{ github.ref }}
+          tag: 0.2.2
           overwrite: true
           body: ${{ steps.tag.outputs.message }}
